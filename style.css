@@ -1,0 +1,343 @@
+  /* @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Edu+SA+Beginner:wght@600&family=Raleway&display=swap'); */
+  /* @import url('https://fonts.googleapis.com/css2?family=Cute+Font&family=Edu+SA+Beginner:wght@600&family=Oswald&family=Raleway&display=swap'); */
+  @import url('https://fonts.googleapis.com/css2?family=PT+Serif&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Prompt&display=swap');
+
+:root {
+    --primary-color:#c72727;
+    --secondary-color: #f99500;
+    --light-color:#f3f3f3;
+    --dark-color:#333;
+    --max-width: 1200px;
+    --front-color:#fff;
+    --sports-color: #f99500;
+    --ent-color: #a66bbe;
+    --tech-color:#0093ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'PT Serif', serif;
+    line-height: 1.5;
+    background-color: var(--light-color);
+}
+
+ul>li>a {
+    text-decoration: none;
+    color: var(--dark-color);
+}
+
+ul {
+    list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    /* font-family: 'Cute Font', cursive; */
+/* font-family: 'Edu SA Beginner', cursive; */
+/* font-family: 'Oswald', sans-serif; */
+    font-family: 'Prompt', sans-serif;
+    text-transform: uppercase;
+}
+/* apply the style where the img is  direct child of the container
+'>'是用来选择直接子元素的 */
+.container>img {
+    width: 100%;
+}
+/* the img is one of the children of the card class
+  .card img {
+    width: 100%;
+}*/
+.container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 0 2rem;
+    overflow: hidden;
+}
+
+#main-nav {
+    background-color: #fff;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+#main-nav .container {
+    display: grid;
+    grid-template-columns: 6fr 3fr 2fr;
+    padding: 1rem;
+    align-items: center;
+}
+
+#main-nav .logo {
+    width: 180px;
+}
+
+#main-nav ul {
+    display: flex;
+    justify-self: end;
+}
+
+#main-nav ul li a {
+    padding: 0.75rem;
+    font-weight: bold;
+}
+
+#main-nav ul li a.current {
+    background-color: var(--primary-color);
+    color: var(--front-color);
+}
+
+#main-nav ul li a:hover {
+    background-color: var(--light-color);
+    color: var(--dark-color);
+}
+
+#main-nav .social {
+    justify-self: center;
+}
+
+#main-nav .social i {
+    color: #777;
+    margin-right: 0.5rem;
+}
+
+/* ShowCase */
+
+#showcase {
+    color: #fff;
+    background-color: var(--dark-color);
+    padding: 2rem;
+    position: relative;
+}
+
+#showcase::before {
+    content: '';
+    background: url('./news website project/image_resources/featured.jpg') no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.4;
+}
+
+#showcase .showcase-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
+
+#showcase .showcase-content {
+    /* the text to be clear on the image */
+    z-index: 1;
+}
+
+.category {
+    display: inline-block;
+    color: #fff;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 0.5rem 0.6rem;
+    border-radius: 15px;
+    margin-bottom: 0.5rem;
+
+}
+
+.category-sport {
+    background-color: var(--sports-color);
+}
+
+.category-ent {
+    background-color: var(--ent-color);
+}
+
+.category-tech {
+    background-color: var(--tech-color);
+}
+
+.btn {
+    display: inline-block;
+    border: none;
+    background-color: var(--primary-color);
+    color: var(--front-color);
+    padding: 0.5rem 1.5rem;
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+}
+
+.btn-secondary {
+    background-color: var(--secondary-color);
+}
+
+#showcase .showcase-content p {
+    margin-bottom: 1rem;
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+/* Home Articles */
+
+.card {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.card img {
+    width: 100%;
+}
+
+#home-articles .articles-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+
+#home-articles .articles-container>*:first-child,
+#home-articles .articles-container>*:last-child {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+    align-items: center;
+    grid-column: 1/ span 2;
+}
+
+#home-articles .articles-container>*:last-child {
+    grid-column: 2/ span 2;
+}
+
+/* Footer */
+
+#main-footer {
+    padding: 1.5rem;
+    background-color: var(--dark-color);
+    color: var(--front-color);
+}
+
+#main-footer img {
+    width: 150px;
+}
+
+#main-footer a {
+    color: var(--front-color);
+}
+
+#main-footer .footer-container {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 1.5rem;
+}
+
+#main-footer .footer-container>*:last-child {
+    background-color: #444;
+    grid-column: 1/ span 4;
+    padding: 0.5rem;
+    text-align: center;
+    font-size: 0.75rem;
+}
+
+#main-footer .footer-container input[type="email"] {
+    width: 90%;
+    padding: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+#main-footer .footer-container input[type="submit"] {
+    width: 90%;
+}
+
+#main-footer .list li {
+    padding: 0.5rem 0;
+    border-bottom: #555 dotted 1px;
+    width: 90%;
+}
+
+#main-footer .list li a:hover {
+    color:var(--primary-color);
+}
+
+/* About */
+
+.l-heading {
+    font-size: 3rem;
+}
+    
+.about-container {
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.about-article{
+    background-color: #fff;
+    padding: 1rem;
+    margin: 2rem 0;
+}
+
+.about-container>*:first-child{
+    grid-row: 1/span 3;
+}
+
+.about-join {
+    padding: 1rem;
+    margin: 2rem;
+}
+.btn-dark {
+    background-color: var(--dark-color);
+    text-align: center;
+}
+
+.about-join {
+    background-color: var(--primary-color);
+    margin: 2rem 0;
+}
+
+/* Article */
+#about .meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #eee;
+    padding: 0.5rem;
+}
+
+.card ul li {
+    padding: 0.5rem 0;
+    border-bottom: #555 dotted 1px;
+    width: 90%;
+}
+
+.bg-secondary {
+    background-color: var(--secondary-color);
+    color: #fff;
+    padding: 1rem;
+}
+
+.bg-secondary p {
+    padding: 1rem 0;
+}
+
+.btn-dark {
+    width: 100%;
+}
+
+.about-article img{
+    width: 100%;
+}
